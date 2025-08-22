@@ -51,7 +51,7 @@
                     <th class="w-40 text-right pr-10">Total</th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody class="">
                 @foreach($category->products as $product)
                     <tr class="border-b">
                         <td class="text-center p-2">

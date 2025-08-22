@@ -12,6 +12,8 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 
         <!-- Font Awesome CDN -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
@@ -23,7 +25,7 @@
         <!-- Styles -->
         @livewireStyles
     </head>
-    <body>
+    <body class="font-poppins">
 
         <section>
             @include('components.navbar')
