@@ -56,6 +56,38 @@ class QuickPurchase extends Component
         }
     }
 
+    public function goToCheckout()
+    {
+        // enforce minimum order
+        if ($this->totalAmount < 3000) {
+            $this->dispatchBrowserEvent('notify', ['type' => 'error', 'message' => 'Minimum order is ₹3000']);
+            return;
+        }
+
+        $cart = [];
+
+        foreach ($this->categories as $category) {
+            foreach ($category->products as $product) {
+                $qty = (int)($this->quantities[$product->id] ?? 0);
+                if ($qty > 0) {
+                    $cart[$product->id] = [
+                        'name'     => $product->name,
+                        'price'    => (float)$product->price,
+                        'quantity' => $qty,
+                    ];
+                }
+            }
+        }
+
+        if (empty($cart)) {
+            $this->dispatchBrowserEvent('notify', ['type' => 'error', 'message' => 'Please add at least one product.']);
+            return;
+        }
+
+        session()->put('cart', $cart);
+        return redirect()->route('checkout');
+    }
+
     public function render()
     {
         return view('livewire.quick-purchase');
