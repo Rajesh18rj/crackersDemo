@@ -19,6 +19,7 @@ return new class extends Migration
             $table->decimal('price', 10, 2); // Discounted or final price
             $table->decimal('original_price', 10, 2)->nullable(); // Original MRP (for savings calculation)
             $table->string('image_path')->nullable(); // Image file path
+            $table->boolean('is_active')->default(true); // Product active status
             $table->timestamps();
         });
     }

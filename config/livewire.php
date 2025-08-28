@@ -15,6 +15,12 @@ return [
 
     'class_namespace' => 'App\\Livewire',
 
+    'uri' => 'crackers/livewire',
+
+    'update_route' => '/crackers/livewire/update',
+
+
+
     /*
     |---------------------------------------------------------------------------
     | View Path

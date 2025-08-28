@@ -33,6 +33,8 @@ return new class extends Migration
 
             // Extras
             $table->string('payment_method')->default('bank_transfer')->nullable();
+            $table->enum('status', ['new', 'processing', 'shipped', 'delivered', 'cancelled'])->default('new')->nullable(); #Order Status
+
             $table->timestamps();
         });
     }

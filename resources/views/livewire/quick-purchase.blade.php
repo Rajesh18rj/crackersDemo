@@ -2,11 +2,11 @@
 <div>
 <div class="relative bg-gradient-to-r from-purple-700 to-pink-500 py-10 mb-6">
     <div class="text-center text-white">
-        <h1 class="text-4xl font-bold">Quick Purchase</h1>
+        <h1 class="text-4xl font-bold">Quick Order</h1>
         <div class="mt-2">
             <a href="/" class="hover:underline">Home</a>
             <span class="mx-2">/</span>
-            <span>Quick Purchase</span>
+            <span>Quick Order</span>
         </div>
     </div>
 </div>

@@ -6,8 +6,8 @@
         <div class="text-center text-white">
             <h1 class="text-4xl font-bold">Order Completed</h1>
             <div class="mt-2">
-                <a href="/quick-purchase" class="inline-block text-blue-600 hover:text-blue-800 font-semibold transition-colors duration-200">
-                    &larr; Back to Quick-Purchase
+                <a href="/quick-order" class="inline-block text-blue-600 hover:text-blue-800 font-semibold transition-colors duration-200">
+                    &larr; Back to Quick-Order
                 </a>
             </div>
         </div>
@@ -71,10 +71,12 @@
                     </thead>
                     <tbody>
                     @foreach($order->items as $item)
-                        <tr class="border-b">
-                            <td class="py-2">{{ $item->product->name }} × {{ $item->quantity }}</td>
-                            <td class="py-2 text-right">₹{{ number_format($item->total, 2) }}</td>
-                        </tr>
+                        @if($item->quantity > 0)
+                            <tr class="border-b">
+                                <td class="py-2">{{ $item->product->name }} × {{ $item->quantity }}</td>
+                                <td class="py-2 text-right">₹{{ number_format($item->total, 2) }}</td>
+                            </tr>
+                        @endif
                     @endforeach
                     <tr class="border-b">
                         <td class="py-2 font-semibold">Subtotal:</td>

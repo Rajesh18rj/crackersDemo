@@ -25,7 +25,8 @@ class ProductSeeder extends Seeder
             'package' => 'PACK',
             'price' => 2000,
             'original_price' => 3000,
-            'image_path' => 'products/3star.jpeg'
+            'image_path' => 'products/3star.jpeg',
+            'is_active' => false,
         ]);
 
         Product::create([
@@ -34,16 +35,18 @@ class ProductSeeder extends Seeder
             'package' => 'PACK',
             'price' => 4000,
             'original_price' => 5500,
-            'image_path' => 'products/5star.jpg'
+            'image_path' => 'products/5star.jpg',
+            'is_active' => true,
         ]);
 
         Product::create([
             'category_id' => $familyPack->id,
             'name' => '7 Star Pack',
             'package' => 'PACK',
-            'price' => 9000,
-            'original_price' => 7000,
-            'image_path' => 'products/7star.jpg'
+            'price' => 7000,
+            'original_price' => 9000,
+            'image_path' => 'products/7star.jpg',
+            'is_active' => true,
         ]);
 
         Product::create([
@@ -52,7 +55,8 @@ class ProductSeeder extends Seeder
             'package' => '1 PKT',
             'price' => 7,
             'original_price' => 35,
-            'image_path' => 'products/kuruvi.jpeg'
+            'image_path' => 'products/kuruvi.jpeg',
+            'is_active' => true,
         ]);
 
         Product::create([
@@ -61,7 +65,8 @@ class ProductSeeder extends Seeder
             'package' => '1 PKT',
             'price' => 16,
             'original_price' => 80,
-            'image_path' => 'products/Parrot.jpg'
+            'image_path' => 'products/Parrot.jpg',
+            'is_active' => true,
         ]);
 
         Product::create([
@@ -70,7 +75,8 @@ class ProductSeeder extends Seeder
             'package' => '1 PKT',
             'price' => 23,
             'original_price' => 116,
-            'image_path' => 'products/LionDLX.jpg'
+            'image_path' => 'products/LionDLX.jpg',
+            'is_active' => true,
         ]);
 
         Product::create([
@@ -79,7 +85,8 @@ class ProductSeeder extends Seeder
             'package' => '1 PKT',
             'price' => 23,
             'original_price' => 116,
-            'image_path' => 'products/6Fighter.jpg'
+            'image_path' => 'products/6Fighter.jpg',
+            'is_active' => true,
         ]);
 
         Product::create([
@@ -88,7 +95,8 @@ class ProductSeeder extends Seeder
             'package' => '1 BOX',
             'price' => 85,
             'original_price' => 425,
-            'image_path' => 'products/chakkarbig1.jpg'
+            'image_path' => 'products/chakkarbig1.jpg',
+            'is_active' => true,
         ]);
 
         Product::create([
@@ -97,7 +105,8 @@ class ProductSeeder extends Seeder
             'package' => '1 BOX',
             'price' => 120,
             'original_price' => 600,
-            'image_path' => 'products/groundchakkarspl.jpg'
+            'image_path' => 'products/groundchakkarspl.jpg',
+            'is_active' => true,
         ]);
 
         Product::create([
@@ -106,7 +115,8 @@ class ProductSeeder extends Seeder
             'package' => '1 BOX',
             'price' => 45,
             'original_price' => 225,
-            'image_path' => 'products/flowerpotsmall.jpg'
+            'image_path' => 'products/flowerpotsmall.jpg',
+            'is_active' => true,
         ]);
 
         Product::create([
@@ -115,7 +125,8 @@ class ProductSeeder extends Seeder
             'package' => '1 BOX',
             'price' => 170,
             'original_price' => 850,
-            'image_path' => 'products/flowerpotsdeluxe.jpg'
+            'image_path' => 'products/flowerpotsdeluxe.jpg',
+            'is_active' => true,
         ]);
     }
 }

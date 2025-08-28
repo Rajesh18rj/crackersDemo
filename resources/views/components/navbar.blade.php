@@ -9,18 +9,19 @@
             <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between text-sm">
 
                 <!-- Delivery Section -->
-                <div class="flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full shadow-inner -ml-5">
-                    <div class="bg-white text-red-600 p-1.5 rounded-full animate-bounce">
-                        <i class="fa-solid fa-truck text-sm"></i>
+                <div class="flex items-center gap-2 bg-white/10 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full shadow-inner -ml-4 sm:-ml-6">
+                    <div class="bg-white text-red-600 p-1 rounded-full sm:p-1.5 animate-bounce">
+                        <i class="fa-solid fa-truck text-xs sm:text-sm"></i>
                     </div>
-                    <span class="font-semibold tracking-wide">Delivery Available</span>
+                    <span class="font-semibold tracking-wide text-xs sm:text-sm">Delivery Available</span>
                 </div>
 
+
                 <!-- Social Icons -->
-                <div class="flex items-center gap-3">
+                <div class="flex items-center gap-3 ">
                     <a href="https://www.instagram.com/niyaacrackersworld/" target="_blank" rel="noopener" aria-label="Instagram"
                        class="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 hover:bg-pink-500 hover:text-white transition">
-                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-instagram "></i>
                     </a>
                     <a href="https://www.facebook.com/people/NCW-Niyaa/61562282244774/" target="_blank" rel="noopener" aria-label="Facebook"
                        class="w-8 h-8 flex items-center justify-center rounded-full bg-white/10 hover:bg-blue-600 hover:text-white transition">
@@ -41,7 +42,7 @@
             <div class="max-w-7xl mx-auto px-4">
                 <div class="relative flex justify-center items-center py-8">
                     <!-- Logo -->
-                    <div class="relative z-10 text-center select-none">
+                    <div class="relative z-10 text-center select-none mt-2">
                         <img
                             src="{{ asset('logo/logo-3.png') }}"
                             alt="NCW Logo"
@@ -95,10 +96,10 @@
                     Shop
                 </a>
 
-                <a href="/quick-purchase"
-                   class="relative pb-1 {{ request()->is('quick-purchase') ? 'text-red-600 font-semibold after:w-full' : 'text-gray-700 hover:text-red-500' }}
+                <a href="/quick-order"
+                   class="relative pb-1 {{ request()->is('quick-order.index') ? 'text-red-600 font-semibold after:w-full' : 'text-gray-700 hover:text-red-500' }}
                           after:content-[''] after:block after:h-[2px] after:bg-red-600 after:transition-all after:duration-300 after:w-0 hover:after:w-full">
-                    Quick Purchase
+                    Quick Order
                 </a>
 
                 <a href="/contact"

@@ -6,6 +6,9 @@
 
         <title>{{ $title ?? 'Crackers Shop' }}</title>
 
+        <!-- CSRF Token -->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+
         <!-- Tailwind CDN -->
         <script src="https://cdn.tailwindcss.com"></script>
 
@@ -45,5 +48,7 @@
 
 
         @livewireScripts
+
+        @stack('scripts')
     </body>
 </html>
