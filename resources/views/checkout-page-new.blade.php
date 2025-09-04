@@ -3,11 +3,14 @@
 @section('content')
 
     {{-- Header --}}
-    <div class="relative bg-gradient-to-r from-blue-700 to-orange-500 py-10 mb-6">
-        <div class="text-center text-white">
+    <div class="relative bg-gradient-to-r from-red-700 to-white py-10 mb-6">
+        <div class="text-center text-red-700 flex items-center justify-center space-x-2">
+            <i class="fas fa-shopping-cart text-4xl"></i>
             <h1 class="text-4xl font-bold">Checkout Page</h1>
         </div>
     </div>
+
+
 
     <form action="{{ route('checkout.place') }}" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto p-6">
         @csrf
@@ -126,10 +129,10 @@
             </table>
 
             <div class="space-y-1 text-right">
-                <p><b>Subtotal:</b> ₹{{ number_format($subtotal, 2) }}</p>
-                <p><b>Shipping:</b> Paid by Transport Office</p>
-                <p><b>Packing Charges 3% extra:</b> ₹{{ number_format($packing, 2) }}</p>
-                <p class="text-lg font-bold"><b>Total:</b> ₹{{ number_format($total, 2) }}</p>
+                <p><b>Total:</b> ₹{{ number_format($subtotal, 2) }}</p>
+{{--                <p><b>Shipping:</b> Paid by Transport Office</p>--}}
+{{--                <p><b>Packing Charges 3% extra:</b> ₹{{ number_format($packing, 2) }}</p>--}}
+{{--                <p class="text-lg font-bold"><b>Total:</b> ₹{{ number_format($total, 2) }}</p>--}}
             </div>
 
             <div class="mt-6 border p-3 rounded bg-gray-50 text-sm">

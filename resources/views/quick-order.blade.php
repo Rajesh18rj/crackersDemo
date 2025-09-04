@@ -9,13 +9,14 @@
 
     <!-- Quick Purchase Header -->
 <div>
-    <div class="relative bg-gradient-to-r from-purple-700 to-pink-500 py-10 mb-6">
-        <div class="text-center text-white">
+    <div class="relative bg-gradient-to-r from-red-700 to-white py-10 mb-6">
+        <div class="text-center text-red-700 flex items-center justify-center space-x-2">
+            <i class="fas fa-rocket text-4xl"></i>
             <h1 class="text-4xl font-bold">Quick Order</h1>
-            <div class="mt-2">
-            </div>
         </div>
     </div>
+
+
 
     <!-- Totals Bar -->
     <div class="sticky top-0 z-50 bg-white shadow-md">

@@ -15,9 +15,9 @@
         <div>
             <h3 class="font-bold text-lg mb-4 text-black">Quick Links</h3>
             <ul class="space-y-3">
-                <li><a href="https://saivasbizconnect.com/" class="flex items-center gap-2 text-black hover:text-red-500 transition"> <span class="text-red-500 font-bold">›</span> Home</a></li>
-                <li><a href="https://saivasbizconnect.com/standard-fireworks-online-about-us/" class="flex items-center gap-2 text-black hover:text-red-500 transition"><span class="text-red-500 font-bold">›</span> About Us</a></li>
-                <li><a href="https://saivasbizconnect.com/shop-diwali-fireworks-online/" class="flex items-center gap-2 text-black hover:text-red-500 transition"><span class="text-red-500 font-bold">›</span> Shop</a></li>
+                <li><a href="/" class="flex items-center gap-2 text-black hover:text-red-500 transition"> <span class="text-red-500 font-bold">›</span> Home</a></li>
+                <li><a href="/about" class="flex items-center gap-2 text-black hover:text-red-500 transition"><span class="text-red-500 font-bold">›</span> About Us</a></li>
+                <li><a href="/shop" class="flex items-center gap-2 text-black hover:text-red-500 transition"><span class="text-red-500 font-bold">›</span> Shop</a></li>
                 <li><a href="/quick-order" class="flex items-center gap-2 text-black hover:text-red-500 transition"><span class="text-red-500 font-bold">›</span> Quick Order</a></li>
                 <li><a href="#" class="flex items-center gap-2 text-black hover:text-red-500 transition"><span class="text-red-500 font-bold">›</span> My Account</a></li>
             </ul>
@@ -27,11 +27,11 @@
         <div>
             <h3 class="font-bold text-lg mb-4 text-black">Information</h3>
             <ul class="space-y-3">
-                <li><a href="https://saivasbizconnect.com/privacy-policy/" class="flex items-center gap-2 text-black hover:text-red-500 transition"><span class="text-red-500 font-bold">›</span> Privacy Policy</a></li>
-                <li><a href="https://saivasbizconnect.com/terms-conditions/" class="flex items-center gap-2 text-black hover:text-red-500 transition"><span class="text-red-500 font-bold">›</span> Terms & Conditions</a></li>
-                <li><a href="https://saivasbizconnect.com/refund_returns/" class="flex items-center gap-2 text-black hover:text-red-500 transition"><span class="text-red-500 font-bold">›</span> Return & Refund</a></li>
-                <li><a href="https://saivasbizconnect.com/order-tracking/" class="flex items-center gap-2 text-black hover:text-red-500 transition"><span class="text-red-500 font-bold">›</span> Order Tracking</a></li>
-                <li><a href="https://saivasbizconnect.com/contact-us/" class="flex items-center gap-2 text-black hover:text-red-500 transition"><span class="text-red-500 font-bold">›</span> Contact Us</a></li>
+                <li><a href="https://niyaacrackers.com/privacy-policy/" class="flex items-center gap-2 text-black hover:text-red-500 transition"><span class="text-red-500 font-bold">›</span> Privacy Policy</a></li>
+                <li><a href="https://niyaacrackers.com/terms-conditions/" class="flex items-center gap-2 text-black hover:text-red-500 transition"><span class="text-red-500 font-bold">›</span> Terms & Conditions</a></li>
+                <li><a href="https://niyaacrackers.com/refund_returns/" class="flex items-center gap-2 text-black hover:text-red-500 transition"><span class="text-red-500 font-bold">›</span> Return & Refund</a></li>
+                <li><a href="https://niyaacrackers.com/order-tracking/" class="flex items-center gap-2 text-black hover:text-red-500 transition"><span class="text-red-500 font-bold">›</span> Order Tracking</a></li>
+                <li><a href="/contact" class="flex items-center gap-2 text-black hover:text-red-500 transition"><span class="text-red-500 font-bold">›</span> Contact Us</a></li>
             </ul>
         </div>
 
@@ -62,6 +62,6 @@
     <!-- Bottom Bar -->
     <div class="mt-12 border-t border-gray-700 pt-6 text-sm flex flex-col md:flex-row justify-between items-center px-6 text-gray-500">
         <p>All rights reserved &copy; 2024 NCW</p>
-        <p class="mt-2 md:mt-0">Website designed by DO365 Technologies</p>
+        <p class="mt-2 md:mt-0">Website designed by Anallyse Technologies</p>
     </div>
 </footer>

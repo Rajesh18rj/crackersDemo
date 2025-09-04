@@ -3,12 +3,14 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
         <div class="flex justify-between items-center h-16 space-x-4">
             <!-- Admin Panel Label -->
-            <div class="flex items-center space-x-2">
-                <i class="fas fa-cogs text-red-600 animate-pulse"></i>
-                <span class="text-red-600 font-extrabold uppercase tracking-wide select-none text-lg">
-                    Admin Panel
-                </span>
-            </div>
+            <a href="{{ route('superuser.dashboard') }}">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-cogs text-red-600 animate-pulse"></i>
+                    <span class="text-red-600 font-extrabold uppercase tracking-wide select-none text-lg">
+                        Admin Panel
+                    </span>
+                </div>
+            </a>
 
             <!-- Menu Links -->
             <div class="flex  flex-shrink-0">
@@ -55,6 +57,19 @@
 
     <nav class="flex-1 overflow-y-auto">
         <ul class="space-y-6">
+
+            <li>
+                <a href="{{ route('superuser.dashboard') }}"
+                   class="flex items-center rounded-lg px-4 py-3 font-semibold group focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-1 focus:ring-offset-white
+                    {{ $currentRoute === 'superuser.dashboard'
+                        ? 'bg-red-50 text-red-700'
+                        : 'text-gray-700 hover:text-red-600 hover:bg-red-50' }}">
+                    <i class="fa-solid fa-chart-line mr-3 text-lg w-6 text-center
+                    {{ $currentRoute === 'superuser.dashboard' ? 'text-red-700' : 'text-red-500 group-hover:text-red-700' }}"></i>
+                    <span class="text-base">Dashboard</span>
+                </a>
+            </li>
+
             <li>
                 <a href="{{ route('admin1.categories.index') }}"
                    class="flex items-center rounded-lg px-4 py-3 font-semibold group focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-1 focus:ring-offset-white

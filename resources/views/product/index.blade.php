@@ -14,6 +14,17 @@
             </a>
         </div>
 
+        <div class="flex justify-end">
+            <form action="{{ route('admin1.products.index') }}" method="GET" class="inline-flex mb-4">
+                <input type="text" name="search" value="{{ request('search') }}" placeholder="Search Product"
+                       class="px-2 py-1 border rounded-l text-sm border-gray-400 mr-1" />
+                <button type="submit"
+                        class="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded-r text-sm font-semibold">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+
         {{-- Success Message --}}
         @if(session('success'))
             <div class="mb-4 p-4 bg-green-100 text-green-700 border border-green-300 rounded-md flex items-center space-x-2">
@@ -29,11 +40,11 @@
                     <i class="fas fa-list mr-2"></i> Product List
                 </h2>
                 <span class="bg-white text-red-600 text-sm font-bold px-3 py-1 rounded-full shadow">
-                {{ $products->total() }} Total
-            </span>
+                    {{ $products->total() }} Total
+                </span>
             </div>
             <div class="overflow-x-auto">
-                <table class="min-w-full divide-y divide-gray-200 text-[10px] xs:text-xs sm:text-sm">
+                <table class="w-full divide-y divide-gray-200 text-[10px] xs:text-xs sm:text-sm">
                     <thead class="bg-red-500 text-white uppercase font-semibold">
                     <tr>
                         <th class="px-1 py-1 sm:px-4 sm:py-3 text-left">ID</th>
@@ -56,7 +67,7 @@
                             {{-- Image --}}
                             <td class="px-1 py-1 sm:px-4 sm:py-3">
                                 @if($product->image_path)
-                                    <img src="{{ asset('storage/app/public/'.$product->image_path) }}"
+                                    <img src="{{ asset('storage/'.$product->image_path) }}"
                                          class="w-8 h-8 sm:w-14 sm:h-14 object-cover rounded-lg shadow border" alt="">
                                 @else
                                     <span class="text-gray-400 text-[10px] sm:text-sm">No Image</span>

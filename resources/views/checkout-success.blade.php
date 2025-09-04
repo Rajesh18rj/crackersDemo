@@ -2,16 +2,26 @@
 
 @section('content')
     <div>
-    <div class="relative bg-gradient-to-r from-green-500 to-green-300 py-10 mb-6">
-        <div class="text-center text-white">
-            <h1 class="text-4xl font-bold">Order Completed</h1>
-            <div class="mt-2">
-                <a href="/quick-order" class="inline-block text-blue-600 hover:text-blue-800 font-semibold transition-colors duration-200">
-                    &larr; Back to Quick-Order
+        <div class="relative bg-gradient-to-r from-red-700 to-white py-10 mb-6 rounded-lg shadow-md text-center">
+            <div class="flex flex-col items-center space-y-4 max-w-xl mx-auto text-red-700">
+                <!-- Smaller green round circle with white tick -->
+                <span class="fa-stack fa-2x">
+            <i class="fas fa-circle fa-stack-2x text-green-500"></i>  <!-- Green circle -->
+            <i class="fas fa-check fa-stack-1x text-white"></i>       <!-- White tick mark -->
+        </span>
+
+                <!-- Header -->
+                <h1 class="text-4xl font-bold">Order Completed</h1>
+
+                <!-- Back link -->
+                <a href="/quick-order"
+                   class="inline-block text-red-700 hover:text-red-900 font-semibold transition-colors duration-200 underline">
+                    &larr; Back to Quick Order
                 </a>
             </div>
         </div>
-    </div>
+
+
         <div class="max-w-3xl mx-auto bg-white shadow rounded p-8 mt-10">
 
             <!-- Thank You -->
@@ -31,7 +41,7 @@
                 </div>
                 <div class="p-3">
                     <div class="text-gray-600">Total:</div>
-                    <div class="font-medium">₹{{ number_format($order->total, 2) }}</div>
+                    <div class="font-medium">₹{{ number_format($order->subtotal, 2) }}</div>
                 </div>
                 <div class="p-3">
                     <div class="text-gray-600">Payment method:</div>
@@ -78,26 +88,30 @@
                             </tr>
                         @endif
                     @endforeach
-                    <tr class="border-b">
-                        <td class="py-2 font-semibold">Subtotal:</td>
-                        <td class="py-2 text-right">₹{{ number_format($order->subtotal, 2) }}</td>
-                    </tr>
-                    <tr class="border-b">
-                        <td class="py-2 font-semibold">Shipping:</td>
-                        <td class="py-2 text-right">Paid by Transport Office</td>
-                    </tr>
-                    <tr class="border-b">
-                        <td class="py-2 font-semibold">Packing Charges 3% extra:</td>
-                        <td class="py-2 text-right">₹{{ number_format($order->packing_charges, 2) }}</td>
-                    </tr>
+
                     <tr class="border-b">
                         <td class="py-2 font-semibold">Payment method:</td>
                         <td class="py-2 text-right">Direct bank transfer</td>
                     </tr>
-                    <tr>
+
+                    <tr class="border-b">
                         <td class="py-2 font-semibold">Total:</td>
-                        <td class="py-2 text-right font-bold">₹{{ number_format($order->total, 2) }}</td>
+                        <td class="py-2 text-right">₹{{ number_format($order->subtotal, 2) }}</td>
                     </tr>
+{{--                    <tr class="border-b">--}}
+{{--                        <td class="py-2 font-semibold">Shipping:</td>--}}
+{{--                        <td class="py-2 text-right">Paid by Transport Office</td>--}}
+{{--                    </tr>--}}
+
+{{--                    <tr class="border-b">--}}
+{{--                        <td class="py-2 font-semibold">Packing Charges 3% extra:</td>--}}
+{{--                        <td class="py-2 text-right">₹{{ number_format($order->packing_charges, 2) }}</td>--}}
+{{--                    </tr>--}}
+
+{{--                    <tr>--}}
+{{--                        <td class="py-2 font-semibold">Total:</td>--}}
+{{--                        <td class="py-2 text-right font-bold">₹{{ number_format($order->total, 2) }}</td>--}}
+{{--                    </tr>--}}
                     </tbody>
                 </table>
 

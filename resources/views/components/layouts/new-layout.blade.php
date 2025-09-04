@@ -53,18 +53,6 @@
 
     @livewireScripts
 
-{{--    <div id="pageSpinner" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden space-x-2">--}}
-{{--        <div class="w-6 h-6 bg-red-600 animate-spin rounded-sm"></div>--}}
-{{--        <div class="w-6 h-6 bg-white animate-spin animation-delay-200 rounded-sm"></div>--}}
-{{--        <div class="w-6 h-6 bg-red-600 animate-spin animation-delay-400 rounded-sm"></div>--}}
-{{--    </div>--}}
-
-{{--    <style>--}}
-{{--        .animation-delay-200 { animation-delay: 0.2s; }--}}
-{{--        .animation-delay-400 { animation-delay: 0.4s; }--}}
-{{--    </style>--}}
-
-
     <div id="pageSpinner" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden space-x-3">
         <div class="w-5 h-5 rounded-full bg-red-600 animate-pulse"></div>
         <div class="w-5 h-5 rounded-full bg-white animate-pulse animation-delay-150"></div>

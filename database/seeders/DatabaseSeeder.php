@@ -20,6 +20,10 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
         ]);
 
+        $this->call([
+            SuperUserSeeder::class,
+        ]);
+
         // Register your seeders here
         $this->call([
             ProductSeeder::class,
