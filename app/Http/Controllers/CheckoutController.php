@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Mail\OrderConfirmedMail;
+use App\Mail\OrderReceivedMail;
 use App\Models\Order;
 use App\Models\OrderItem;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
 
 class CheckoutController extends Controller
@@ -92,6 +92,9 @@ class CheckoutController extends Controller
         if (!empty($order->email)) {
             Mail::to($order->email)->send(new OrderConfirmedMail($order));
         }
+
+        // Send mail to shop owner
+        Mail::to('rajeshkumar18rj@gmail.com')->send(new OrderReceivedMail($order));
 
         return redirect()->route('checkout.success', $order->id)
 

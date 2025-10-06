@@ -85,7 +85,7 @@
 
                 <!-- Center: Menu for md and up -->
                 <div class="hidden md:flex space-x-8">
-                    <a href="/"
+                    <a href="{{ route('quick-order.index') }}"
                        class="relative pb-1 text-gray-700 hover:text-red-500 {{ request()->is('/') ? 'text-red-600 font-semibold after:w-full' : '' }}
                   after:content-[''] after:block after:h-[2px] after:bg-red-600 after:transition-all after:duration-300 after:w-0 hover:after:w-full">
                         Home

@@ -37,7 +37,7 @@
                     </div>
                 </form>
                 <br>
-                <small>(Min. ₹3000)</small>
+                <small>(Min. ₹5000)</small>
             </div>
 
         </div>
@@ -69,7 +69,7 @@
                         data-price="{{ $product->price }}"
                         data-original-price="{{ $product->original_price }}">
                         <td class="text-center p-2">
-                            <img src="{{ asset('storage/'.$product->image_path) }}" class="w-16 mx-auto" alt="{{ $product->name }}">
+                            <img src="{{ asset('storage/app/public/'.$product->image_path) }}" class="w-16 mx-auto" alt="{{ $product->name }}">
                         </td>
                         <td class="p-2">{{ $product->name }}</td>
                         <td class="p-2">{{ $product->package }}</td>
@@ -101,7 +101,7 @@
                      data-price="{{ $product->price }}"
                      data-original-price="{{ $product->original_price }}">
                     <div class="flex items-center space-x-3">
-                        <img src="{{ asset('storage/'.$product->image_path) }}" class="w-16 h-16 object-contain" alt="{{ $product->name }}">
+                        <img src="{{ asset('storage/app/public/'.$product->image_path) }}" class="w-16 h-16 object-contain" alt="{{ $product->name }}">
                         <div class="flex-1">
                             <h3 class="font-semibold">{{ $product->name }}</h3>
                             <p class="text-sm text-gray-600">{{ $product->package }}</p>
@@ -176,7 +176,7 @@
 
             // Enable/disable checkout button
             const checkoutBtn = document.getElementById("checkout-btn");
-            if (totalAmount >= 3000) {
+            if (totalAmount >= 5000) {
                 checkoutBtn.disabled = false;
                 checkoutBtn.classList.remove("opacity-50", "cursor-not-allowed");
             } else {

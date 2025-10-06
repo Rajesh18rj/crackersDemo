@@ -31,7 +31,7 @@ class QuickOrderController extends Controller
 
         $totalAmount = collect($cart)->sum(fn($item) => $item['price'] * $item['quantity']);
 
-        if ($totalAmount < 3000) {
+        if ($totalAmount < 5000) {
             return redirect()->back()->with('error', 'Minimum order is ₹3000');
         }
 

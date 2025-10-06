@@ -56,4 +56,16 @@ class OrderController extends Controller
         $order->delete();
         return redirect()->route('admin1.orders.index')->with('success', 'Order deleted successfully.');
     }
+
+    public function print(Order $order)
+    {
+        // Load items where quantity < 1 along with related product
+        $order->load(['items' => function ($query) {
+            $query->where('quantity', '>=', 1)->with('product');
+        }]);
+
+        return view('order.print', compact('order'));
+    }
+
+
 }

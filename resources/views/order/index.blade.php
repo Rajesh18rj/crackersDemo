@@ -17,7 +17,6 @@
         @endif
 
         <!-- Cards Section -->
-        <!-- Cards Section -->
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 mb-10">
             <div class="rounded-xl bg-white border border-gray-200 shadow-sm p-3 sm:p-4 md:p-6 flex flex-col items-center">
                 <span class="text-gray-400 text-[10px] sm:text-xs md:text-sm mb-1 md:mb-2">New Orders</span>
@@ -96,6 +95,13 @@
                                    class="block px-4 py-2 text-sm text-blue-700 hover:bg-blue-50 hover:text-blue-900 flex items-center">
                                     <i class="fas fa-eye mr-2"></i> View
                                 </a>
+
+
+                                <a href="{{ route('admin1.orders.print', $order) }}" target="_blank" rel="noopener"
+                                   class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 flex items-center">
+                                    <i class="fas fa-print mr-2"></i> Print
+                                </a>
+
                                 <a href="{{ route('admin1.orders.edit', $order) }}"
                                    class="block px-4 py-2 text-sm text-yellow-700 hover:bg-yellow-100 hover:text-yellow-900 flex items-center">
                                     <i class="fas fa-edit mr-2"></i> Edit

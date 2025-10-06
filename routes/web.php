@@ -10,17 +10,17 @@ use App\Http\Controllers\SuperUserDashboardController;
 use Illuminate\Support\Facades\Route;
 
 //
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+Route::get('/', function () {
+    return view('welcome');
+});
 
 //Route::view('/about', 'about')->name('about');
 //Route::view('/contact', 'contact')->name('contact');
 //Route::get('/shop', \App\Livewire\Shop::class)->name('shop');
 
-Route::get('/', function () {
-    return redirect()->away('https://niyaacrackers.com/');
-})->name('welcome');
+//Route::get('/', function () {
+//    return redirect()->away('https://niyaacrackers.com/');
+//})->name('welcome');
 
 Route::get('/about', function () {
     return redirect()->away('https://niyaacrackers.com/standard-fireworks-online-about-us/');
@@ -106,7 +106,12 @@ Route::middleware(['superuser'])->group(function () {
     Route::put('admin1/orders/{order}', [OrderController::class, 'update'])->name('admin1.orders.update');
 
     Route::delete('admin1/orders/{order}', [OrderController::class, 'destroy'])->name('admin1.orders.destroy');
+
+    Route::get('admin1/orders/{order}/print', [OrderController::class, 'print'])->name('admin1.orders.print');
+
 });
+
+
 
 //Route::middleware([
 //    'auth:sanctum',
